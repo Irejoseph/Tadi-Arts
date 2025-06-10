@@ -1,13 +1,49 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Art & Y2K</title>
-    <link rel="stylesheet" type="image/svg+xml" href="/art-site/src/style.css" />
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Art & Y2K</title>
+  <link rel="stylesheet" type="image/svg+xml" href="/art-site/src/style.css" />
+</head>
+
+<body>
+  <div id="app"></div>
+  <div class="background"></div>
+  <nav class="navbar navbar-expand-lg navbar-dark position-relative">
+    <div class="container-fluid">
+      <img class="navbar-img" src="./assets/wobbly.jpeg" alt="">
+    </div>
+    <div class="navbar-support container-fluid">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+
+  <hero class="content">
+    <h1>Welcome to Tadichukwus Art</h1>
+    <button>Explore</button>
+  </hero>
+  <div>
+    <section class="image-rotator">
+      <img class="rotator-img" src="./assets/eye art.jpeg" alt="Slideshow image" />
+    </section>
+  </div>
+  
+  
+
+  <script type="module" src="/src/main.js"></script>
+</body>
 </html>

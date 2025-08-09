@@ -58,6 +58,12 @@ html {
   backdrop-filter: brightness(0.8);
 }
 
+hero.content {
+  display: block;
+  margin: 12px 0 8px 0; /* Further reduced top/bottom margin */
+  padding: 0 8px; /* Further reduced horizontal padding */
+}
+
 h1 {
   font-size: 3rem;
   color: #0ff;
@@ -80,33 +86,6 @@ button:hover {
   background: #0ff;
   color: black;
   box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
-}
-
-.navbar {
-  border-bottom: white 1px solid;
-  padding: 5px;
-  display: flex;
-}
-
-.navbar-support {
-  margin-left: 80%;
-  width: 100%;
-}
-
-.navbar-nav {
-  display: flex;
-  gap: 1rem; /* spacing between nav items */
-  list-style: none;
-  margin-top: 60px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.navbar-img {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  margin-right: 10px;
 }
 
 .nav-link {
@@ -152,3 +131,156 @@ button:hover {
     scale: 1;
   }
 }
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 32px;
+  z-index: 1000;
+}
+
+.sidebar-img {
+  width: 120px;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 48px;
+}
+
+.sidebar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sidebar-nav .nav-item {
+  width: 100%;
+  text-align: center;
+}
+
+.sidebar-nav .nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 8px 0;
+  display: block;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.sidebar-nav .nav-link.active,
+.sidebar-nav .nav-link:hover {
+  background: #444;
+}
+
+.hero-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+/* Add left margin to main content to avoid overlap */
+body {
+  margin-left: 220px;
+}
+
+.two-col-grid {
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px; /* Increased gap for more space between boxes */
+  margin: 250px auto;
+  max-width: 1107px;
+  height: 300px;
+  padding: 0 16px;
+}
+.grid-item {
+  background: #181818;
+  border-radius: 17px;
+  min-height: 400px;
+  height: 400px;
+  max-width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Optionally add a subtle box-shadow or border */
+  box-shadow: 0 2px 16px #0ff2;
+}
+
+.grid-item img {
+  height: 600px;
+  object-fit: cover;
+  border-radius: 17px;
+}
+
+.grid-item.img img{
+  height: 600px;
+  object-fit: cover;
+  border-radius: 17px;
+
+}
+
+/* === About Page Styles (About.html) === */
+body.about-page {
+  background: black;
+  color: #00ffff;
+  font-family: "Orbitron", sans-serif;
+}
+
+.about-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #0ff2 0%, #222 100%);
+  z-index: 0;
+  pointer-events: none;
+  border-radius: 12px;
+  filter: blur(12px);
+}
+.about-content {
+  position: relative;
+  z-index: 1;
+}
+.about-title {
+  font-size: 2.5rem;
+  margin-bottom: 18px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 12px #0ff, 0 0 24px #0ff2;
+}
+.about-divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #0ff, #fff0, #0ff);
+  margin: 0 auto 32px auto;
+  border-radius: 2px;
+  box-shadow: 0 0 8px #0ff8;
+}
+.about-text {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #b2ffff;
+  margin-bottom: 0;
+  text-shadow: 0 0 4px #0ff4;
+  border: 1px solid #0ff;
+  border-radius: 5px;
+  padding: 24px 20px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* === End About Page Styles === */
+
+/* === Index Page Styles (index.html) === */
+/* (all other styles in this file affect index.html) */
